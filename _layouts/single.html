@@ -30,6 +30,12 @@ layout: default
   <div class="page__inner-wrap" style="display: flex; gap: 2rem;">
 
   <section class="page__content" itemprop="text" style="width: 75%;">
+    {% if page.title %}
+    <h1 id="page-title" class="page__title" itemprop="headline">
+      {{ page.title }}
+    </h1>
+    {% endif %}
+
     {{ content }}
     {% include like_button.html %}
     {% if page.link %}
