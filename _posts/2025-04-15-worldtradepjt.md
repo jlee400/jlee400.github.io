@@ -3,105 +3,116 @@ layout: single
 title: "[Data Science Project] Who Controls the World Trade of Soybeans and Beef? A NetworkX Analysis in Python"
 author: "Juhyun Lee"
 toc: true
-toc_sticky: true
 categories: project
 comments: true
 ---
-
 ## Project Description
 
-This project was launched from individual research in the George Mason University course CSI 500, Computational Science Tools. Inspired by the academic journal _Social network analysis of virtual water trade among major countries in the world_, I constructed this project to explore how to academically analyze world data using the `networkx` package in Python. 
+This project was launched from individual research in George Mason University course CSI 500, Computational Science Tools. Reading an academic journal, _Social network analysis of virtual water trade among major countries in the world_, led to this project to observe ways to academically analyze world data using the `networkx` package in Python.
 
 ## Journal Article Summary
+### [Deng et al. (2021)] Social network analysis of virtual water trade among major countries in the world
 
-### [Deng et al. (2021)] Social Network Analysis of Virtual Water Trade Among Major Countries in the World
+This study observes the virtual water trade strategy among 19 major countries from 2006 to 2015. The virtual water strategy refers to how water-scarce countries and regions replace their own production. Using a _multi-regional input-output model_ and _social network analysis using data sources from [Eora Global MRIO](http://www.worldmrio.com)_, it thoroughly explains how water trade operates throughout the world.
 
-This study observes the virtual water trade strategy among 19 major countries from 2006 to 2015. The virtual water strategy refers to countries and regions with water scarcity replacing their own production. Using a _Multi-regional input-output model_ and _Social network analysis using data sources from [Eora Global MRIO](http://www.worldmrio.com)_, the study thoroughly explains how water trade operates throughout the world.
+### Research question and research gap 
 
-### Research Question and Research Gap
-
-This study aims to understand how global virtual water trade is structured using network theory. Even though several studies had been conducted previously, research gaps remained—specifically, the inconvenient calculation of the volume of industrial and service industry products due to their complex processes.
+This study aims to understand how global virtual water trade is structured using network theory. Even though several studies were previously done, there were research gaps and inconvenient calculations for the volume of industrial and service industry products due to their complicated computation processes. 
 
 ### Method
 
-#### 1. Input-Output Model
+1. Input-output model
 
-This method can be divided into a single-region input-output model and a multi-regional input-output model based on the number of research areas. 
+This method can be divided into a single-region input-output model and a multi-regional input-output model according to the number of research areas. 
 
-Both models follow the same steps. The input-output model uses water use data for each industry, divided by total output, to obtain the <span style="background-color:#FFE6E6"> coefficient of direct water use</span>.
+Both models follow basically the same steps. The input-output model uses the water use data of each industry divided by the total output to obtain the <span style="background-color:#FFE6E6">coefficient of direct water use</span>.
 
-This coefficient is multiplied with the <span style="background-color:#E6E6FA">_Leontief inverse matrix_</span>. Finally, import and export data from the input-output table is used to obtain virtual water trade volume in various industries.
+The coefficient of direct water use is multiplied with the <span style="background-color:#E6E6FA">_Leontief inverse matrix_</span>. Finally, import and export data in the input-output table are used to obtain virtual water trade volume in various industries.
 
-#### 2. Multi-Regional Input-Output Model
+2. Multi-regional input-output model
 
-Let \( w \) be the direct water coefficient:
+w is the direct water coefficient
 
 $$
 w^r_i = \frac{W^r_i}{X^r_i}
 $$
 
-- \( w^r_i \): Virtual water usage of country \( r \)'s industry \( i \)  
-- \( W^r_i \): Total water usage of country \( r \)'s industry \( i \)  
-- \( X^r_i \): Gross output of country \( r \)'s industry \( i \)  
-- \( r \): The first country (region)  
-- \( i \): Primary industry
+- $w^r_i$: Virtual water usage of country r's industry i  
+- $W^r_i$: Total water usage of country r's industry i  
+- $X^r_i$: Gross output of country r's industry i  
+- r: The first country (region)  
+- i: Primary industry
 
-The world input-output table balance equation from EORA:
+The formula for the balance of the world input-output tables in the EORA database is written as:
 
 $$
 AX + Y = X
 $$
 
-This can be rewritten as:
+A: mn x mn order coefficient matrix of direct consumption  
+X: mn x 1 order of the total output column vector  
+Y: final use column vector
+
+This formula can be rewritten as:
 
 $$
-X = (I - A)^{-1}Y = LY
+X = (I - A)^{-1}Y = LY,
 $$
 
-Multiplying the diagonal matrix \( \hat{W} \), the Leontief inverse matrix \( L \), and final use matrix \( Z \), we obtain:
+where $L = (I - A)^{-1}$ is the mn x mn order of the Leontief inverse matrix. Multiplying the direct water coefficient diagonal matrix W, the Leontief inverse matrix L, and the final use matrix Z, we can obtain the virtual water trade matrix H. 
 
 $$ 
 H = \hat{W} L Z
 $$
 
-After further aggregating each country by industry, we derive the \( m \times m \) virtual trade matrix \( T \).  
-The diagonal elements of \( T \) represent virtual water consumption within a country, and off-diagonal elements represent import/export trade.
+By calculating this formula, it is finally possible to obtain the m x m order virtual trade matrix T by merging each country (region) by industry. 
+> The diagonal elements of matrix T represent the virtual water consumption of the products produced by the countries (regions), whereas the non-diagonal elements represent the virtual water import and export trade. _Deng et al. (2021)_
 
-#### 3. Network Characteristics
+This study considers non-diagonal elements, where $t^{rs} (r \ne s)$ indicates the bilateral trade volume between country r and s, inferring the virtual export from r to s, or import from s to r.
 
-- **Density**:
+3. Network characteristics of virtual water trade among countries (regions) around the world
+
+- Density
 
 $$
 D = \frac{\sum_{r \ne s,\, r=1}^{m} \sum_{s=1}^{m} t^{rs}}{m(m - 1)}
 $$
 
-- **Asymmetry**:
+A greater density of the network entails a greater average value of virtual water trade among countries and a closer relationship. 
+
+- Asymmetry
 
 $$
 S = \frac{ \sum_{r \ne s,\, r=1}^{m} \sum_{s=1}^{m} \left| t^{rs} - t^{sr} \right| }{ m(m-1) }
 $$
 
-- **Out-Degree**:
+The greater the value S, the greater the virtual water trade deficit (or surplus) among major countries.
+
+- Out-Degree
 
 $$
 OD = \sum_{s \ne r,\, s=1}^{m} t^{rs}
 $$
 
-- **In-Degree**:
+The greater the Out-Degree (OD), the more virtual water exports a country has.
+  
+- In-Degree
 
 $$
 ID = \sum_{r \ne s,\, r=1}^{m} t^{rs}
 $$
 
+The greater the In-Degree (ID), the more virtual water imports a country has. Also, a greater Out-Degree than In-Degree indicates a virtual water trade surplus in the country, and vice versa.
+
 ### Result and interpretation
 
- The virtual water imports and exports of major countries (regions) have increased in varying degrees, especially in 2015 due to the further improvement of transportation facilities in recent years. Moreover, the logistics costs are continually decreasing. Thus, the trade volume of each country is further expanding. 
+The virtual water imports and exports of major countries (regions) have increased to varying degrees, especially in 2015 due to the improvement of transportation facilities. Moreover, logistics costs are continually decreasing, expanding the trade volume of each country. 
 
-After the thorough network analysis using the methods described above, the data matrix corresponding to the virtual water trade network reflected the multilateral virtual water trade between multiple contries. For yearly virtual water trade analysis, the gap between virtual water imports and exports is growing. China's virtual water exports were the largest in the virtual water trade among the 19 major countries. By contrast, Saudi Arabia's virtual water exports were the smallest. 
+After thorough network analysis using the methods described above, the data matrix corresponding to the virtual water trade network reflected the multilateral virtual water trade between multiple countries. Over the years, the gap between virtual water imports and exports is growing. China had the largest virtual water exports among the 19 major countries, while Saudi Arabia had the smallest. 
 
-On the other hand, the US had largest virtual water imports in the virtual trade among 19 major countries. In 2006, Argentina's virtual water imports were the smallest. In 2015, Saudi Arabia's virtual water imports were the smallest. This shows how the tendency of virtual water trade differs by each year. 
+On the other hand, the US had the largest virtual water imports. In 2006, Argentina had the smallest virtual water imports, and in 2015, it was Saudi Arabia. This shows how the virtual water trade trends vary by year.
 
-In 2006 and 2015, the country with the most out flow in the virtual water trading network was China, and the country with the most outflow was the US. 
+In both 2006 and 2015, the country with the most outflow was China, and the one with the most inflow was the US.
 
 ![스크린샷 2025-04-15 173653](https://github.com/user-attachments/assets/4b19d546-7b5f-4fc1-a697-d889cd00c86e)
 
@@ -121,7 +132,6 @@ Second, the trade volume of agricultural products in various countries may be lo
 
 In thse reasons, while emphasizing the virtual water trade of agricultural products, it is necessary to pay attention to the production and production of related industries and trading.
 
----
 
 ## Data Introduction
 
@@ -150,49 +160,54 @@ This project used _Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv_ data f
 
 ### Major characteristics of the data 
 
-1. **The edge data**  
-   Contains information about import and export activities.  
+1. The edge data  
+   Columns:  
    - Reporter Country Code  
    - Reporter Countries  
-   - ...
+   - Partner Country Code  
+   - Partner Countries  
+   - Item  
+   - Element  
+   - Year  
+   - Unit  
+   - Value  
 
-2. **The node data**
+   Contains information about import and export activities based on different items and years.
 
-   2-1. **Population data**  
-   Same columns as edge data.
+2. The node data  
 
-   2-2. **Macro data**  
-   Same columns as edge data.
+   2-1. Population data  
+   Contained same columns.
 
-
+   2-2. Macro data  
+   Contained same columns.
 ### data pre-processing
 
 (1) Extraction of columns in need
 
-``` python
+python
 link = link[['Reporter Country Code', 'Reporter Countries', 'Partner Country Code', 'Partner Countries', 'Item', 'Element', 'Year', 'Unit', 'Value']]
-```
 
-``` python
+
+python
 macro = macro[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
 pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
-```
+
 
 (2) Choose the items and elements
 
 |Division|Items / Elements chosen|
 |--------|-----------------------|
-|node(pop)|``Total Population - Both sexes	``|
-|node(macro)|``Share of GDP US$, 2015 prices``|
-|edge|``Soya beans``, ``beef and veal preparations nes``| 
+|node(pop)|Total Population - Both sexes	|
+|node(macro)|Share of GDP US$, 2015 prices|
+|edge|Soya beans, beef and veal preparations nes| 
 
 
 (3) Merge the node data (pop and macro)
 
-``` python
+python
 node = pd.merge(macro, pop, on=["country", "country_code", "year"], how= "inner")
-```
----
+
 
 ## Analysis
 ### Density of soybean and beef in world trade
@@ -344,24 +359,21 @@ This is Global beef trade interactive network graph. You can hover for country n
 
 Look through how world soybeans and beef trade are different in volume by region, or continent. 
 
----
-
-## Explanation of Analysis
+## Explanation of analysis
 
 This project used weighted directed graphs to represent soybean and beef trade networks between countries. Key network metrics such as **in-degree**, **out-degree**, **betweenness centrality**, and **modularity** were used to analyze the structural importance of countries in global trade.
 
-- **In-degree**: Total imports from other countries  
-- **Out-degree**: Total exports to other countries  
-- **Betweenness centrality**: A country's role as a bridge in trade  
-- **Modularity**: Communities or clusters within the trade network
+- **In-degree**: Total imports from other countries.
+- **Out-degree**: Total exports to other countries.
+- **Betweenness centrality**: Measures a country's role as a bridge in the trade network.
+- **Modularity**: Used to detect communities within the network, representing trade blocs or regional clusters.
 
-Trade networks were constructed from FAO bilateral trade data and visualized using both `networkx` (static) and `plotly` (interactive) tools.
+Trade networks were constructed from FAO bilateral trade data, and visualized using both networkx (static graph) and plotly (interactive global map).
 
----
 
-## Showing Codes + Result
+## Showing codes + result
 
-If you want to check the full code PDF for this project, visit: [Soybean_beef_networkx_project](https://github.com/jlee400/CSI500_projects/blob/main/Post1.pdf)
+If you want to check the whole code pdf file of this project, visit: [Soybean_beef_networkx_project](https://github.com/jlee400/CSI500_projects/blob/main/Post1.pdf)
 
 ## Interpretation
 
@@ -375,15 +387,13 @@ From the out-degree and in-degree trends, we observe that:
 
 These results align with global economic trends and indicate how geopolitical or environmental factors may shift trade flows.
 
----
-
-## Best Regards
+## Best regards,
 
 Thanks for making it all the way to the end!  
-If you're fascinated by how **Python and NetworkX** can uncover the **hidden structure of global trade**, you're one of us.  
+If you're fascinated by how **Python and NetworkX** can uncover the **hidden structure of global trade**, you're one of us. 
 
 **Got questions?** Curious about another product’s trade network?  
-Drop a ``comment`` below and I might cover it next time (yes, even soybeans and beef 🫛🐂).
+Drop a comment below and I might cover it next time (yes, even soybeans and beef 🫛 🐂).
 
 And hey — if you enjoyed the analysis, **click the heart🩷**!  
 It really motivates me to dive deeper into the data ocean.
@@ -391,3 +401,4 @@ It really motivates me to dive deeper into the data ocean.
 Until next time, data nerds! 📊🐍
 
 ![드디어 끝났다..](https://velog.velcdn.com/images/bje0416/post/74bc4bac-9cfe-4cd5-bf46-603aae6fd3cc/image.gif)
+
