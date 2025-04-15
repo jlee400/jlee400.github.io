@@ -1,0 +1,8 @@
+.sticky-toc {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px; // 헤더 피해서 고정
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-left: 1rem;
+}
