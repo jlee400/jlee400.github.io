@@ -292,7 +292,7 @@ Now, this is more sophisticated network graph with its arf_layout. The color is 
 What is modularity and betweenness in network theory?
 - Modularity
 
-Way to measure how well a network is divided into communities
+Way to measure how well a network is divided into communities.
 
 - Betweenness
 
@@ -300,13 +300,17 @@ Way to measure how well nodes connect social circles.
 
 This two theory helps to uncover both community structure and key players in gloabal trade networks. Explicitly, US is the most biggest country to trade soybeans. Also, it is possible to see that US is the main player of the world soybean trade domain for all time (1986-2023). Other countries player crucial role in world soybean trade are France, Canada, Taiwanese China, Austria, Germany and Kingdom of the Netherlands.
 
+
 ![World Soybean Trade](https://cdn.statcdn.com/Infographic/images/normal/19148.jpeg)
+
+Observing this infographic, it is possible to see that US is the most biggest country in soybeans trade. However, there is a rapid increase in Brazil that over took US. It is not reflected on the network graph as it is so rapidly increased in short period while the graph shows cumulative interactions.
 
 <figure>
     <img src="/assets/Trade_volume_of_soybeans.png" alt="Alt text" />
     <figcaption>Network graph reflected its weight</figcaption>
 </figure>
 
+Next visualization reflects the volume of soybean trade with width of the edge. US is obviously the most powerful country in soybean trade. Countries in blue color are having meaningful and explicit interaction in this graph.
 
 
 ### Detailed network analysis of beef
@@ -316,7 +320,11 @@ This two theory helps to uncover both community structure and key players in glo
     <figcaption>Directed network graph of beef</figcaption>
 </figure>
 
+This is network analysis of beef and reflecting the edge width of its trade volume. In this graph, it is possible to see that european countries, France, German, Italy, Netherland, United Kingdom are having densed relationship each other with the beef trade. Globally, US, United Arab Emirates, Canada, Philippines, Australia, Jordan, and New Zealand have bigger size of node. It is very interesting to see that geographically close countries like {US, Canada}, {Austrailia, New Zealand, Philippines}, and {United Arab Emirates, Jordan} are interacting each other in trade of beef.
 
+![World Beef Trade]((https://cdn.statcdn.com/Infographic/images/normal/19122.jpeg))
+
+Along with this infographic, EU is the country exporting and importing beef each other. Also, countries like Brazil, India US, Australia, Canada are big hands in world beef trade. This is the statistic infographic only regarding 2023, so it may be different from what the network graph shows.
 
 ### Network of world soybean and beef trade
 <figure>
@@ -324,13 +332,48 @@ This two theory helps to uncover both community structure and key players in glo
     <figcaption>Network graph of trade volume of both soybeans and beef</figcaption>
 </figure>
 
+The network of integrated world soybean and beef trade shows how the world trade on those items are forming their own communities. 
+
+- Green colored node countries
+
+France, United Kindom of Great Britain and Northern Ireland, Serbia, Netherlands, Romania, Belgium, Portugal, Greece, Austria, Sweden, Spain, Italy, Szechia, etc.
+
+Those are European countires, and this shows how they are connected through world trade, not only in continent.
+
+- Blue colored node countries
+
+US, mainland China, Brazil, Canada, Taiwanese China, Thailand, Philippines, Argentina, Japan, India, Argentina, Hong Kong, Guatemala, etc.
+
+Those are Asian, American countries, and this shows how Asia and American countries are mainstream and broad community in world trade.
+
+- Brown colored countries
+
+United Arab Emirates, Kazakhstan, Turkiye, Jordan
+
+Those are middle east countries, and this shows how those locally close countries interact by world trade on soybeans and beef.
+
+- Grey colored countries
+
+South Africa, Botswana, Zambia, etc.
+
+Those are mostly african countries, and this shows how they are connected within one continent, Africa. However, that community is not so mainstream, more close to outsiders.
+
 ### Interactive soybean and beef world trade flow visualization
 
 <iframe src="/assets/soybean_trade_map.html" width="100%" height="600px"></iframe>
 
+This is Global soybean trade interactive network graph. You can hover for country names, zoom in and out to observe. 
+
 <iframe src="/assets/beef_trade_map.html" width="100%" height="600px"></iframe>
 
+
+This is Global beef trade interactive network graph. You can hover for country names, zoom in and out to observe. 
+
+Look through how world soybeans and beef trade are different in volume by region, or continent. 
+
 ## Explanation of analysis
+
+
 
 ## Showing codes + result
 
