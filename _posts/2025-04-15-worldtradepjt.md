@@ -139,7 +139,7 @@ According the the article previously explained, this project follows similar str
 
 > According to research from the soybean checkoff, U.S. beef operations use over 1.3 million tons of soybean meal every year. That’s the meal from about 55 million bushels of U.S. soybeans. One of those operators is Matt Widboom, from the southwestern corner of Minnesota.
 
-“We have used soy meal as the protein supplement for our cattle since we started raising cattle in the 1930s,” says Widboom. “The quality of the feed is very important to our product, and using soy meal allows them to produce lean meat.”
+>“We have used soy meal as the protein supplement for our cattle since we started raising cattle in the 1930s,” says Widboom. “The quality of the feed is very important to our product, and using soy meal allows them to produce lean meat.”
 
 Grinding the soybeans into meal makes it easier on the cattle’s digestive system. _[The soy hopper](https://unitedsoybean.org/hopper/beef-bulking-up-with-soy/)_
 
