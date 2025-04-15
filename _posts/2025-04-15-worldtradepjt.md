@@ -120,6 +120,7 @@ Second, the trade volume of agricultural products in various countries may be lo
 
 In thse reasons, while emphasizing the virtual water trade of agricultural products, it is necessary to pay attention to the production and production of related industries and trading.
 
+---
 
 ## Data Introduction
 
@@ -148,31 +149,20 @@ This project used _Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv_ data f
 
 ### Major characteristics of the data 
 
-1. The edge data
+1. **The edge data**  
+   Contains information about import and export activities.  
+   - Reporter Country Code  
+   - Reporter Countries  
+   - ...
 
-Columns 
+2. **The node data**
 
-- Reporter Country Code
-- Reporter Countries
-- Partner Contry Code
-- Partner Counties
-- Item
-- Element
-- Year
-- Unit
-- Value
+   2-1. **Population data**  
+   Same columns as edge data.
 
-Contains informaiton about import and export activities based on different items and years. 
+   2-2. **Macro data**  
+   Same columns as edge data.
 
-2. The node data
-
-2-1. Population data
-
-Contained same columns.
-
-2-2. Macro data
-
-Contained same columns.
 
 ### data pre-processing
 
@@ -201,6 +191,7 @@ pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
 ``` python
 node = pd.merge(macro, pop, on=["country", "country_code", "year"], how= "inner")
 ```
+---
 
 ## Analysis
 ### Density of soybean and beef in world trade
@@ -352,6 +343,8 @@ This is Global beef trade interactive network graph. You can hover for country n
 
 Look through how world soybeans and beef trade are different in volume by region, or continent. 
 
+---
+
 ## Explanation of Analysis
 
 This project used weighted directed graphs to represent soybean and beef trade networks between countries. Key network metrics such as **in-degree**, **out-degree**, **betweenness centrality**, and **modularity** were used to analyze the structural importance of countries in global trade.
@@ -363,7 +356,7 @@ This project used weighted directed graphs to represent soybean and beef trade n
 
 Trade networks were constructed from FAO bilateral trade data and visualized using both `networkx` (static) and `plotly` (interactive) tools.
 
-
+---
 
 ## Showing Codes + Result
 
@@ -380,6 +373,8 @@ From the out-degree and in-degree trends, we observe that:
 - For **beef**, **US**, **UAE**, **Philippines** **Australia**, and **New Zealand** are notable 5 countries in their beef trade.
 
 These results align with global economic trends and indicate how geopolitical or environmental factors may shift trade flows.
+
+---
 
 ## Best Regards
 
