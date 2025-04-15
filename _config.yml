@@ -307,7 +307,8 @@ defaults:
       type: posts
     values:
       layout: single
-      toc: true
+      toc: 
+        sidebar: true
       toc_sticky: true
       classes: wide
       author_profile: true
