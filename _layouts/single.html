@@ -39,7 +39,7 @@ layout: default
         </header>
       {% endunless %}
 
-    <section class="page__content" itemprop="text" style="width: 80%; float: left;">
+    <section class="page__content" itemprop="text" style="width: 75%; float: left;">
   {{ content }}
   {% include like_button.html %}
   {% if page.link %}
@@ -48,7 +48,8 @@ layout: default
 </section>
 
 {% if page.toc %}
-  <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}" style="width: 23%; float: right; margin-top: 2rem; padding-left: 1rem;">
+  <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}"
+         style="position: sticky; top: 100px; float: right; width: 23%; padding-left: 1rem; align-self: flex-start;">
     <nav class="toc">
       <header>
         <h4 class="nav__title">
@@ -60,6 +61,7 @@ layout: default
     </nav>
   </aside>
 {% endif %}
+
 
 
       <footer class="page__meta">
