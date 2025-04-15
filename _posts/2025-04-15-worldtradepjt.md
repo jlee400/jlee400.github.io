@@ -17,7 +17,81 @@ This studies observes the virtual water trade strategy among 19 major countries 
 
 ### Research question and research gap 
 
+This study aims to understand how global virtual water trade is structured using network theory. Even though there were several studies done previously, there were research gaps, inconvenient calculation for the volume of industrial products and service industry products due to its complicated calculation process. 
+
 ### Method
+
+1. Input-output model
+
+This method can be divided into a single-region input-output model and multi-regional input-output model according to the number of research areas. 
+
+Both model is basically same in its steps. Input-output model uses the water use data of each industry divided by the total outpu to obtain the <span style="background-color:#FFE6E6"> coefficient of direct water use </span>.
+
+The coefficient of direct water use is multiplied with the <span style="background-color:#E6E6FA"> _Leontief inverse matrix_ </span>. Finally, import and export in the input-output table is used to obtain virtual water trade volum in various industries.
+
+
+2. Multi-regional input-output model
+
+w is the direct water coefficient
+
+$$
+w^r_i = \frac{W^r_i}{X^r_i}
+$$
+
+- $w^r_i$: Virtual water usage of r country's i industry
+  
+- $W^r_i$: Total water usage of r country's i industry
+  
+- $X^r_i$: Gross output of r country's i industry
+  
+- r: The first country (region)
+
+- i: Primary industry
+
+The formula for the balance of the world input-output tables in the EORA data base is written as:
+
+$$
+AX + Y = X
+$$
+
+A: mn x mn order coefficient matrix of direct consumption
+
+X: mn x 1 order of the total output column vector
+
+Y: final used column vector
+
+This formula can be rewritten as:
+
+$$
+X = (I - A)^{-1}Y = LY,
+$$
+
+where $L = (1 - A)^{-1}$ is the mn x mn order of the Leontief inverse matix. Multiplying the direct water coefficient diagonal matrix W, the Leontief' inverse matrix L, and the final used matrix Z, it is able to obtain the virtual water trade matrix H. 
+
+$$ 
+H = \hat{W} L Z
+$$
+
+Calcualting this formula, finally it is available to obtain the m x m order virtual trade matrix T by further merging each country (region) by industry. 
+> The diagonal element of the matrix T represents the virtual water consumption of the > products produced by the countries (regions), whereas the non-diagonal elements are
+> the virtual water import and export trade. 
+
+This study considers non-diagonal elements, $t^{rs}(r \ne s) indicates the bilateral trade volume between country r and s, inferring the virtual export from country r to s, or import from country r to s.
+
+3. Network characteristics of virtual water trade among countries (regions) around the world
+
+- Density
+
+$$
+D = \frac{\sum_{r \ne s,\, r=1}^{m} \sum_{s=1}^{m} t^{rs}}{m(m - 1)}
+$$
+
+
+A Greater density of network entails a greater average value of the virtual water trade among countries and a closer relationship. 
+  
+- Asymmetry
+- Out-Degree
+- In-Degree
 
 ### Result and interpretation
 
