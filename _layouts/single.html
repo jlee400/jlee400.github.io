@@ -48,7 +48,7 @@ layout: default
 </section>
 
 {% if page.toc %}
-  <aside class="sidebar__right sticky-toc" style="width: 20%; float: right;">
+  <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}" style="width: 23%; float: right; margin-top: 2rem; padding-left: 1rem;">
     <nav class="toc">
       <header>
         <h4 class="nav__title">
@@ -60,6 +60,7 @@ layout: default
     </nav>
   </aside>
 {% endif %}
+
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
