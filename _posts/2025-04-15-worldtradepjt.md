@@ -8,7 +8,7 @@ comments: true
 ---
 ## Project Description
 
-This project was launched from individual research in George Mason University course CSI 500, Computational Science Tools. Reading an academic journal, _Social network analysis of virtual water trade among major countries in the world_, led to this project to observe ways to academically analyze world data using the `networkx` package in Python.
+This project was launched from individual research in George Mason University course CSI 500, Computational Science Tools. Reading an academic journal, _Social network analysis of virtual water trade among major countries in the world_, led to this project to observe ways to academically analyze world trade data using the `networkx` package in Python.
 
 ## Journal Article Summary
 ### [Deng et al. (2021)] Social network analysis of virtual water trade among major countries in the world
@@ -185,14 +185,14 @@ This project used _Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv_ data f
 
 (1) Extraction of columns in need
 
-python
+```python
 link = link[['Reporter Country Code', 'Reporter Countries', 'Partner Country Code', 'Partner Countries', 'Item', 'Element', 'Year', 'Unit', 'Value']]
+```
 
-
-python
+``` python
 macro = macro[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
 pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
-
+```
 
 (2) Choose the items and elements
 
