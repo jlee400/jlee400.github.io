@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Data Science Project] Comparison of soybean and beef world trade social network analysis usingnetworkx in python"
+title: "[Data Science Project] Who Controls the World Trade of Soybeans and Beef? A NetworkX Analysis in Python"
 author: "Juhyun Lee"
 toc: true
 categories: project
@@ -287,14 +287,14 @@ Now, this is a directed network graph of beef. It shows different posture of its
     <figcaption>Directed network graph of soybean</figcaption>
 </figure>
 
-Now, this is more sophisticated network graph with its arf_layout. The color is based on modularity and betweenness. 
+Now, this is more sophisticated network graph with its arf_layout. The color is based on modularity and betweenness centrality. 
 
-What is modularity and betweenness in network theory?
-- Modularity
+What is modularity and betweenness centrality in network theory?
+- **Modularity**
 
 Way to measure how well a network is divided into communities.
 
-- Betweenness
+- **Betweenness**
 
 Way to measure how well nodes connect social circles. 
 
@@ -373,8 +373,43 @@ Look through how world soybeans and beef trade are different in volume by region
 
 ## Explanation of analysis
 
+This project used weighted directed graphs to represent soybean and beef trade networks between countries. Key network metrics such as **in-degree**, **out-degree**, **betweenness centrality**, and **modularity** were used to analyze the structural importance of countries in global trade.
+
+- **In-degree**: Total imports from other countries.
+- **Out-degree**: Total exports to other countries.
+- **Betweenness centrality**: Measures a country's role as a bridge in the trade network.
+- **Modularity**: Used to detect communities within the network, representing trade blocs or regional clusters.
+
+Trade networks were constructed from FAO bilateral trade data, and visualized using both `networkx` (static graph) and `plotly` (interactive global map).
 
 
 ## Showing codes + result
 
+If you want to check the whole code pdf file of this project, visit: [Soybean_beef_networkx_project](https://github.com/jlee400/CSI500_projects/blob/main/Post1.pdf)
+
 ## Interpretation
+
+From the out-degree and in-degree trends, we observe that:
+
+- **United States** and **main land China** have consistently traded very actively among several years.
+- In recent years, **Brazil** is rising country in world trade in both import and export.
+- **Euroean Countries**, **Asian, American Countries**, **Middle East Countries**, **African Countries** are clustered in their trade along with geographic and political distance.
+- For **soybeans**, **US**, **main land China**, **France**, **Taiwanese China** and **Canada** are notable 5 countries in their soybean trade.
+- For **beef**, **US**, **UAE**, **Philippines** **Australia**, and **New Zealand** are notable 5 countries in their beef trade.
+
+These results align with global economic trends and indicate how geopolitical or environmental factors may shift trade flows.
+
+## Best regards,
+
+Thanks for making it all the way to the end!  
+If you're fascinated by how **Python and NetworkX** can uncover the **hidden structure of global trade**, you're one of us. 
+
+**Got questions?** Curious about another product’s trade network?  
+Drop a ``comment`` below and I might cover it next time (yes, even soybeans and beef 🫛 🐂).
+
+And hey — if you enjoyed the analysis, **click the heart🩷**!  
+It really motivates me to dive deeper into the data ocean.
+
+Until next time, data nerds! 📊🐍
+
+[드디어 끝났다..](https://velog.velcdn.com/images/bje0416/post/74bc4bac-9cfe-4cd5-bf46-603aae6fd3cc/image.gif)
