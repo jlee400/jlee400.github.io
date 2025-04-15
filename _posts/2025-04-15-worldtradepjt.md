@@ -39,8 +39,19 @@ In world trade, it is
 
 <figure>
     <img src="/assets/bar_in_out_degree.png" alt="Alt text" />
-    <figcaption>In and Out degree of top 7 countries (1986 - 2023)</figcaption>
+    <figcaption>In and Out degree of top 7 countries (2023)</figcaption>
 </figure>
+
+<figure>
+    <img src="/assets/Out_degree.png" alt="Alt text" />
+    <figcaption>Out degree of top 7 countries (1986 - 2023)</figcaption>
+</figure>
+
+<figure>
+    <img src="/assets/In_degree.png" alt="Alt text" />
+    <figcaption>In degree of top 7 countries (1986 - 2023)</figcaption>
+</figure>
+
 
 ### Simple network of soybean and beef trade
 
@@ -85,6 +96,6 @@ In world trade, it is
 
 ### Interactive soybean and beef world trade flow visualization
 
-<iframe src="/assets/plots/soybean_trade_map.html" width="100%" height="600px"></iframe>
+<iframe src="/assets/soybean_trade_map.html" width="100%" height="600px"></iframe>
 
-<iframe src="/assets/plots/beef_trade_map.html" width="100%" height="600px"></iframe>
+<iframe src="/assets/beef_trade_map.html" width="100%" height="600px"></iframe>
