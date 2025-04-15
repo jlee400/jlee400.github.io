@@ -148,13 +148,13 @@ According the the article previously explained, this project follows similar str
 
 “We have used soy meal as the protein supplement for our cattle since we started raising cattle in the 1930s,” says Widboom. “The quality of the feed is very important to our product, and using soy meal allows them to produce lean meat.”
 
-Grinding the soybeans into meal makes it easier on the cattle’s digestive system. _[The soy hopper]((https://unitedsoybean.org/hopper/beef-bulking-up-with-soy/))_
+Grinding the soybeans into meal makes it easier on the cattle’s digestive system. _[The soy hopper](https://unitedsoybean.org/hopper/beef-bulking-up-with-soy/)_
 
 
 
 ### Data sources
 
-![FAO]((https://github.com/user-attachments/assets/3b205637-6b56-40f7-9791-c4892f25646d))
+![FAO](https://github.com/user-attachments/assets/3b205637-6b56-40f7-9791-c4892f25646d)
 
 > The Food and Agriculture Organization (FAO) is a specialized agency of the United Nations that leads international efforts to defeat hunger. _FAO official website_
 
@@ -322,7 +322,7 @@ Next visualization reflects the volume of soybean trade with width of the edge. 
 
 This is network analysis of beef and reflecting the edge width of its trade volume. In this graph, it is possible to see that european countries, France, German, Italy, Netherland, United Kingdom are having densed relationship each other with the beef trade. Globally, US, United Arab Emirates, Canada, Philippines, Australia, Jordan, and New Zealand have bigger size of node. It is very interesting to see that geographically close countries like {US, Canada}, {Austrailia, New Zealand, Philippines}, and {United Arab Emirates, Jordan} are interacting each other in trade of beef.
 
-![World Beef Trade]((https://cdn.statcdn.com/Infographic/images/normal/19122.jpeg))
+![World Beef Trade](https://cdn.statcdn.com/Infographic/images/normal/19122.jpeg)
 
 Along with this infographic, EU is the country exporting and importing beef each other. Also, countries like Brazil, India US, Australia, Canada are big hands in world beef trade. This is the statistic infographic only regarding 2023, so it may be different from what the network graph shows.
 
