@@ -8,10 +8,12 @@ comments: true
 ---
 ## Project Description
 
-In world trade, it is 
+This project was launched from individual research in George Mason University course CSI 500, Computational Science Tools. Reading an academic journal, _Social network analysis of virtual water trade among major countries in the world_, constructed this project to observe ways to academically analyze the world data using ``networkx`` package in python. 
 
 ## Journal Article Summary
 ### [Deng et al (2021)] Social network analysis of virtual water trade among major countries in the world
+
+This studies observes the virtual water trade strategy among 19 major countries from 2006 to 2015. The virtual water strategy refers to in which water-scarce countries and regions to replace their own production. Using _Multi-regional input-output model_ and _Social network analysis using Data sources from [Eora Global MRIO](http://www.worldmrio.com)_, thoroughly explain how water trade is operating throuout the world.
 
 ### Research question and research gap 
 
