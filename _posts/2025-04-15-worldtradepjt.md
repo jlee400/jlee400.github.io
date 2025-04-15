@@ -154,7 +154,7 @@ Grinding the soybeans into meal makes it easier on the cattle’s digestive syst
 
 ### Data sources
 
-![FAO](![image](https://github.com/user-attachments/assets/3b205637-6b56-40f7-9791-c4892f25646d))
+![FAO]((https://github.com/user-attachments/assets/3b205637-6b56-40f7-9791-c4892f25646d))
 
 > The Food and Agriculture Organization (FAO) is a specialized agency of the United Nations that leads international efforts to defeat hunger. _FAO official website_
 
@@ -214,33 +214,55 @@ pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
 |node(macro)|``Share of GDP US$, 2015 prices``|
 |edge|``Soya beans``, ``beef and veal preparations nes``| 
 
+
+(3) Merge the node data (pop and macro)
+
+``` python
+node = pd.merge(macro, pop, on=["country", "country_code", "year"], how= "inner")
+```
+
 ## Analysis
 ### Density of soybean and beef in world trade
-
-
 
 <figure>
     <img src="/assets/density.png" alt="Alt text" />
     <figcaption>Density of soybean and beef</figcaption>
 </figure>
 
-### In and Out degree of soybean and beef breakdown within Top 7 most frequent countries
+Higher density of network refers to a greater average value of the virtual water trade among countries and a closer relationship. In the graph, it shows critically lower tendency in its early 2000s. Infering this from the journal article, financial crisis in 2008 led to the decline of world trade. Then, it increases as recovering severe previous drop for both soybeans and beef. 
+
+### In and Out degree of soybean and beef within Top 7 most frequent countries (2023) 
 
 <figure>
     <img src="/assets/top7_in_out_deg.png" alt="Alt text" />
     <figcaption>In and Out degree of top 7 countries (2023)</figcaption>
 </figure>
 
+In 2023, the most latest year in the dataset, the bar graph of in degree and out detree shows the most powerful and active countries in world trade lately. Needless to say, United states of americal was the most active country among top 7 countries displayed on the bar graph. Second place is mainland China, and both US and China is overwhelming absolute power in the world trade. Rest of them are Argentina, Paraguay, Brazil, Canada, and Spain. 
+
+### In and Out degree of soybean and beef within Top 7 most frequent countries
+
 <figure>
     <img src="/assets/Out_degree.png" alt="Alt text" />
     <figcaption>Out degree of top 7 countries (1986 - 2023)</figcaption>
 </figure>
+
+For out degree trend, it shows countries with their power at **export**. This graph was introduced from sorting all countries yearly then picked top 7 countries that frequently high ranked in its outdegree. Top 7 countries with the most powerful out degree are US, Japan, mainland China, Canada, Paraguay, Argentina, and Brazil.
+
+Again, US is the most stable in its out degree tendency. Interestingly China is a country which experienced the most rapid growth in recent export degree. Also Brazil, twinkle and disappeared in 2019. 
+
+One noteable thing was most of the countries had their exprot crisis in 2019-2020, which was COVID-19 period. However, Brazil is the one who had their remarkable export degree. According to external news articles, this was because Brazil replaced China's position during China's strict quarantine period in COVID-19 period.
 
 <figure>
     <img src="/assets/In_degree.png" alt="Alt text" />
     <figcaption>In degree of top 7 countries (1986 - 2023)</figcaption>
 </figure>
 
+In degree trends shows countries with their degree of **import**. This graph was introduced with the same way as out degree trend analysis. Top 7 countries the most powerful in import were: US, Taiwanese China, Japan, mainland China, Paraguay, Brazil, and Republic of Korea. 
+
+Regarding import degree, most of the countries shows increasing tendency with some noticeable trends. Most of the country, of course, experienced significant drop in their import activity during COVID-19. However, mainland China recovered its import degree increased substantially in 2019. According to external new articles, mainland China increased their import rate to recover demand on their supplies due to the shut-down of factories during pandemic.
+
+Otherwise, Brazil has their increasing tendency on import degree in recent years, but not so stable.
 
 ### Simple network of soybean and beef trade
 
@@ -249,10 +271,14 @@ pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
     <figcaption>Simple Network of soybean</figcaption>
 </figure>
 
+This is a breakdown of each items in world trade. First, this is a directed network graph for soybeans. Most of the countries are well related accross each country. It is possible to observe countries that only imports soybeans. However, this graph is not so clear to look at.
+
 <figure>
     <img src="/assets/Network_of_beef.png" alt="Alt text" />
     <figcaption>Simple Network of beef</figcaption>
 </figure>
+
+Now, this is a directed network graph of beef. It shows different posture of its network comparing to soybean network. For Republic of Korea, it shows how many countries that republic of Korea imports from many other countries. However, this graph is not so clear to look at as well. 
 
 ### Detailed network analysis of soybean
 
@@ -260,6 +286,21 @@ pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
     <img src="/assets/arf_of_soybeans.png" alt="Alt text" />
     <figcaption>Directed network graph of soybean</figcaption>
 </figure>
+
+Now, this is more sophisticated network graph with its arf_layout. The color is based on modularity and betweenness. 
+
+What is modularity and betweenness in network theory?
+- Modularity
+
+Way to measure how well a network is divided into communities
+
+- Betweenness
+
+Way to measure how well nodes connect social circles. 
+
+This two theory helps to uncover both community structure and key players in gloabal trade networks. Explicitly, US is the most biggest country to trade soybeans. Also, it is possible to see that US is the main player of the world soybean trade domain for all time (1986-2023). Other countries player crucial role in world soybean trade are France, Canada, Taiwanese China, Austria, Germany and Kingdom of the Netherlands.
+
+![World Soybean Trade](https://cdn.statcdn.com/Infographic/images/normal/19148.jpeg)
 
 <figure>
     <img src="/assets/Trade_volume_of_soybeans.png" alt="Alt text" />
@@ -288,3 +329,9 @@ pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
 <iframe src="/assets/soybean_trade_map.html" width="100%" height="600px"></iframe>
 
 <iframe src="/assets/beef_trade_map.html" width="100%" height="600px"></iframe>
+
+## Explanation of analysis
+
+## Showing codes + result
+
+## Interpretation
