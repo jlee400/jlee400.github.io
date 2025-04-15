@@ -38,7 +38,7 @@ In world trade, it is
 ### In and Out degree of soybean and beef breakdown within Top 7 most frequent countries
 
 <figure>
-    <img src="/assets/bar_in_out_degree.png" alt="Alt text" />
+    <img src="/assets/top7_in_out_deg.png" alt="Alt text" />
     <figcaption>In and Out degree of top 7 countries (2023)</figcaption>
 </figure>
 
