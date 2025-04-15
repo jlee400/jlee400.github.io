@@ -73,8 +73,7 @@ H = \hat{W} L Z
 $$
 
 Calcualting this formula, finally it is available to obtain the m x m order virtual trade matrix T by further merging each country (region) by industry. 
-> The diagonal element of the matrix T represents the virtual water consumption of the > products produced by the countries (regions), whereas the non-diagonal elements are
-> the virtual water import and export trade. 
+> The diagonal element of the matrix T represents the virtual water consumption of the products produced by the countries (regions), whereas the non-diagonal elements are the virtual water import and export trade. _Deng et al (2021)_
 
 This study considers non-diagonal elements, $t^{rs}(r \ne s) indicates the bilateral trade volume between country r and s, inferring the virtual export from country r to s, or import from country r to s.
 
@@ -86,25 +85,139 @@ $$
 D = \frac{\sum_{r \ne s,\, r=1}^{m} \sum_{s=1}^{m} t^{rs}}{m(m - 1)}
 $$
 
-
 A Greater density of network entails a greater average value of the virtual water trade among countries and a closer relationship. 
   
 - Asymmetry
+
+$$
+S = \frac{ \sum_{r \ne s,\, r=1}^{m} \sum_{s=1}^{m} \left| t^{rs} - t^{sr} \right| }{ m(m-1) }
+$$
+
+The greater the value S, the greater the virtual water trade deficit (or surplus) among major countries.
+
 - Out-Degree
+
+$$
+OD = \sum_{s \ne r,\, s=1}^{m} t^{rs}
+$$
+
+The greater the Out-Degree (OD), the more virtual water exports in the country.
+  
 - In-Degree
+
+$$
+ID = \sum_{r \ne s,\, r=1}^{m} t^{rs}
+$$
+
+The greater the In-Degree (ID), indicates that a country has more virtual water imports. Also, A greater Out-Degree than In-Degree indicates a virtual water trade surplus in the country, vice versa.
 
 ### Result and interpretation
 
+ The virtual water imports and exports of major countries (regions) have increased in varying degrees, especially in 2015 due to the further improvement of transportation facilities in recent years. Moreover, the logistics costs are continually decreasing. Thus, the trade volume of each country is further expanding. 
+
+After the thorough network analysis using the methods described above, the data matrix corresponding to the virtual water trade network reflected the multilateral virtual water trade between multiple contries. For yearly virtual water trade analysis, the gap between virtual water imports and exports is growing. China's virtual water exports were the largest in the virtual water trade among the 19 major countries. By contrast, Saudi Arabia's virtual water exports were the smallest. 
+
+On the other hand, the US had largest virtual water imports in the virtual trade among 19 major countries. In 2006, Argentina's virtual water imports were the smallest. In 2015, Saudi Arabia's virtual water imports were the smallest. This shows how the tendency of virtual water trade differs by each year. 
+
+In 2006 and 2015, the country with the most out flow in the virtual water trading network was China, and the country with the most outflow was the US. 
+
+![스크린샷 2025-04-15 173653](https://github.com/user-attachments/assets/4b19d546-7b5f-4fc1-a697-d889cd00c86e)
+
+In this virtual trade networks between 19 major countries, the size of node in the network reflects the size of the degree and the degree of ingress respectively. The thickness of the trade links between countries reflects the amount of virtual water import and export trade between countries.
+
+The greater the bilateral trade volume between countries, the thicker the connection. 
+
+### Conclusions and implications
+
+The virtual water import and export of major countries in the world increased in 2015 varying degrees. Among them, China's virtual water import and Russia's virtual water export growth rates were the highest. Major countries have the largest export and import in the primary industry, except for Japan and South Korea. 
+
+For the implications, there were two possibilities:
+
+First, water-deficient countries can alleviate the pressure on water suply by importing sources.
+
+Second, the trade volume of agricultural products in various countries may be lower than the volume of trade in industrial products and services, the amount of water consumed per unit of production of agricultural products is much greater than that of industrial products and services. 
+
+In thse reasons, while emphasizing the virtual water trade of agricultural products, it is necessary to pay attention to the production and production of related industries and trading.
+
+
 ## Data Introduction
+
+According the the article previously explained, this project follows similar structure, but compare only two different trading product, soybeans and beef. 
+
+> According to research from the soybean checkoff, U.S. beef operations use over 1.3 million tons of soybean meal every year. That’s the meal from about 55 million bushels of U.S. soybeans. One of those operators is Matt Widboom, from the southwestern corner of Minnesota.
+
+“We have used soy meal as the protein supplement for our cattle since we started raising cattle in the 1930s,” says Widboom. “The quality of the feed is very important to our product, and using soy meal allows them to produce lean meat.”
+
+Grinding the soybeans into meal makes it easier on the cattle’s digestive system. _[The soy hopper]((https://unitedsoybean.org/hopper/beef-bulking-up-with-soy/))_
+
+
 
 ### Data sources
 
+![FAO](![image](https://github.com/user-attachments/assets/3b205637-6b56-40f7-9791-c4892f25646d))
+
+> The Food and Agriculture Organization (FAO) is a specialized agency of the United Nations that leads international efforts to defeat hunger. _FAO official website_
+
+> FAOSTAT provides free access to food and agriculture data for over 245 countries and territories and covers all FAO regional groupings
+from 1961 to the most recent year available. _FAO STAT Official Website_
+
+The data used for this project was downloaded from _[FAOSTAT]((https://www.fao.org/faostat/en/#data))_.
+This project used _Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv_ data for edge, and _Macro-Statistics_Key_Indicators_E_All_Data_(Normalized).csv_ and _Population_E_All_Data_(Normalized).csv_ for node.
+
+
 ### Major characteristics of the data 
+
+1. The edge data
+
+Columns 
+
+- Reporter Country Code
+- Reporter Countries
+- Partner Contry Code
+- Partner Counties
+- Item
+- Element
+- Year
+- Unit
+- Value
+
+Contains informaiton about import and export activities based on different items and years. 
+
+2. The node data
+
+2-1. Population data
+
+Contained same columns.
+
+2-2. Macro data
+
+Contained same columns.
 
 ### data pre-processing
 
+(1) Extraction of columns in need
+
+``` python
+link = link[['Reporter Country Code', 'Reporter Countries', 'Partner Country Code', 'Partner Countries', 'Item', 'Element', 'Year', 'Unit', 'Value']]
+```
+
+``` python
+macro = macro[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
+pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
+```
+
+(2) Choose the items and elements
+
+|Division|Items / Elements chosen|
+|--------|-----------------------|
+|node(pop)|``Total Population - Both sexes	``|
+|node(macro)|``Share of GDP US$, 2015 prices``|
+|edge|``Soya beans``, ``beef and veal preparations nes``| 
+
 ## Analysis
 ### Density of soybean and beef in world trade
+
+
 
 <figure>
     <img src="/assets/density.png" alt="Alt text" />
