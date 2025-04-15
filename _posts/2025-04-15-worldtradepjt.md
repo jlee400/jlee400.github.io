@@ -389,4 +389,4 @@ It really motivates me to dive deeper into the data ocean.
 
 Until next time, data nerds! 📊🐍
 
-[드디어 끝났다..](https://velog.velcdn.com/images/bje0416/post/74bc4bac-9cfe-4cd5-bf46-603aae6fd3cc/image.gif)
+![드디어 끝났다..](https://velog.velcdn.com/images/bje0416/post/74bc4bac-9cfe-4cd5-bf46-603aae6fd3cc/image.gif)
