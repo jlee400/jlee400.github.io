@@ -205,8 +205,9 @@ pop = pop[["Area Code", "Area", "Item", "Element", "Year", "Unit", "Value"]]
 
 (3) Merge the node data (pop and macro)
 
-python
+``` python
 node = pd.merge(macro, pop, on=["country", "country_code", "year"], how= "inner")
+```
 
 
 ## Analysis
