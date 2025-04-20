@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "[Data Science Project] Who Controls the World Trade of Soybeans and Beef? A NetworkX Analysis in Python"
+description: "A network analysis of global soybean and beef trade using NetworkX and FAO data (1986–2023)."
 author: "Juhyun Lee"
 toc: true
 categories: project
