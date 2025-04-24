@@ -162,6 +162,7 @@ include:
   - _pages
   - ads.txt
   - robots.txt
+  - sitemap.xml
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
