@@ -10,18 +10,18 @@ Hi! I’m Juhyun Lee (이주현), a junior majoring in **Computational & Data Sc
 ---
 
 ### 💼 Academic & Research Interests
-- Environmental data science 🌱  
-- International trade analysis 📦  
-- Network modeling and Python-based visualizations 🐍
+- Machine learning & Data mining
+- Real-world data analysis  
+- Statistics
 
 ---
 
 ### 🧠 What I’m Good At
-- Python, NetworkX, Pandas, Plotly  
+- Python(Networkx, scikit learn, numpy, and pandas), R
 - Data storytelling & visualization  
-- Explaining complex stuff simply
+- Implication and analysis based on real-world context
 
 ---
 
 ### 🎯 My Goals
-To become a data-driven problem solver working on real-world sustainability and urban planning challenges!
+To become a professional data scientist converting data into story!
