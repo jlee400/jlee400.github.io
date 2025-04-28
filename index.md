@@ -1,14 +1,9 @@
 ---
 layout: home
 author_profile: true
-title: "Juhyun's Learning Hub"
+title: "💡Hub solves your curiosity, Juhyun's learning hub"
 permalink: /
 ---
 
-## 🌟 Juhyun’s Picks
+![Juhyun’s Learning hub](https://github.com/user-attachments/assets/5adbfb04-35dc-4ebe-937e-f7bbb0cb8104)
 
-- [Who Controls the World Trade of Soybeans and Beef?]([https://jlee400.github.io/project/worldtradepjt/](https://jlee400.github.io/project/worldtrade-soybean-beef-networkx/))
-- [CDS 101 Final Project](https://jlee400.github.io/project/cds101project/)
-- [Resume - March 2025](https://jlee400.github.io/resume/resume/)
-
-> These are some of the projects I'm most proud of — feel free to explore!
