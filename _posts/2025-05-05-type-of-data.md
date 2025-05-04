@@ -35,14 +35,17 @@ Data is basically a collection of data objects and their attributes.
 -	‘Label’ 
 -	ID numbers, eye color, sex, zip codes
 -	=, ≠
+
 ② Ordinal
 -	‘Order’
 -	Rankings, grades, height
 -	$> , <$
+
 ③ Interval 
 -	‘Unit of measurement’, but arbitrary
 -	Calander dates, temperatures in Celsius or Fahrenheit
 -	+, -
+
 ④ Ratio
 -	‘Unit of measurement’, but the origin is not arbitrary
 -	Temperature in Kelvin, length, counts and elapsed time
@@ -54,6 +57,7 @@ Data is basically a collection of data objects and their attributes.
 -	Zip codes, counts, or set of words
 -	Often represented as <span style="background-color:#E6E6FA">integer variables</span>
 -	<span style="background-color:#E6E6FA">Binary attributes</span> are a special case of discrete attributes
+
 ② Continuous Attributes
 -	Has real numbers as attribute values
 -	Temperature, height, or weight
@@ -69,17 +73,24 @@ Data is basically a collection of data objects and their attributes.
 
 - The types of operations chosen should be “MEANINGFUL” for the type of data
 - Four properties of data
+
 ① Distinctness
+
 ② Order
+
 ③ Meaningful intervals
+
 ④ Meaningful ratios
+
 - The data type you see (often numbers or strings) may NOT capture all the properties 
 - The data type you see may suggest properties that are not present
 - Analysis may depend on these other properties of the data : Many statistical analyses depend only on the distribution
 - Key: ‘What is meaningful?’ can be determined by the domain you want to analyze about
 
 2)	Object
+
 -	A collection of attributes
+  
 2.	Record, point, case, sample, entity, or instance. 
 
 # Warmest regards,
