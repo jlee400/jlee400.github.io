@@ -38,7 +38,7 @@ Data is basically a collection of data objects and their attributes.
 ② Ordinal
 -	‘Order’
 -	Rankings, grades, height
--	> , <
+-	$> , <$
 ③ Interval 
 -	‘Unit of measurement’, but arbitrary
 -	Calander dates, temperatures in Celsius or Fahrenheit
