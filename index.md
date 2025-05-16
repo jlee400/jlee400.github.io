@@ -5,12 +5,13 @@ title: ""
 permalink: /
 ---
 
+<!-- 로그인 UI -->
 <div id="auth-section">
-  <button id="login-btn" onclick="signIn()">🔐 Google 로그인</button>
+  <button id="login-btn">🔐 Google 로그인</button>
 
   <div id="user-info" style="display:none;">
     <p>👤 <span id="user-email"></span> 님, 환영합니다!</p>
-    <button onclick="signOut()">🚪 로그아웃</button>
+    <button id="logout-btn">🚪 로그아웃</button>
   </div>
 </div>
 
@@ -34,16 +35,27 @@ permalink: /
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
 
+  function showUser(email) {
+    document.getElementById("login-btn").style.display = "none";
+    document.getElementById("user-info").style.display = "block";
+    document.getElementById("user-email").innerText = email;
+  }
+
   function signIn() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider).then((result) => {
-      const user = result.user;
-      localStorage.setItem("user", JSON.stringify({
-        uid: user.uid,
-        email: user.email
-      }));
-      showUser(user.email);
-    });
+    auth.signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        localStorage.setItem("user", JSON.stringify({
+          uid: user.uid,
+          email: user.email
+        }));
+        showUser(user.email);
+      })
+      .catch((error) => {
+        alert("로그인 중 오류: " + error.message);
+        console.error(error);
+      });
   }
 
   function signOut() {
@@ -53,13 +65,11 @@ permalink: /
     });
   }
 
-  function showUser(email) {
-    document.getElementById("login-btn").style.display = "none";
-    document.getElementById("user-info").style.display = "block";
-    document.getElementById("user-email").innerText = email;
-  }
-
   window.onload = () => {
+    // 버튼에 함수 직접 연결 (Jekyll에선 onclick 속성 잘 안 먹힐 수 있음)
+    document.getElementById("login-btn").addEventListener("click", signIn);
+    document.getElementById("logout-btn").addEventListener("click", signOut);
+
     const saved = localStorage.getItem("user");
     if (saved) {
       const parsed = JSON.parse(saved);
@@ -67,6 +77,7 @@ permalink: /
     }
   };
 </script>
+
 <div style="text-align: center;">
   <h1>💡Hub solves your curiosity,<br>Juhyun's Learning Hub</h1>
   <img src="https://github.com/user-attachments/assets/4bd93b6e-9ed4-4d2d-8266-03f1a178eb2c" alt="Juhyun’s Learning hub" style="width:500px; height:auto; max-width:90%;">
