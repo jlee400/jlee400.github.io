@@ -1,0 +1,59 @@
+---
+layout: page
+title: 유료 콘텐츠
+permalink: /premium/
+---
+
+<h2>🔥 프리미엄 콘텐츠</h2>
+
+<div id="locked">
+  <p>🔒 이 콘텐츠는 유료입니다. 로그인 및 결제가 필요합니다.</p>
+  <a href="/login/">👉 로그인하러 가기</a>
+</div>
+
+<div id="unlocked" style="display:none;">
+  <p>🎉 결제자 전용 본문이 여기에 나옵니다.</p>
+  <p>예시 텍스트: 이건 아무나 못 보는 고급 정보야!</p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDXB4ilHCdpWzc93i_ZuXy28XF0WD5sRmw",
+    authDomain: "csi500.firebaseapp.com",
+    projectId: "csi500"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  function unlockContent() {
+    document.getElementById("locked").style.display = "none";
+    document.getElementById("unlocked").style.display = "block";
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("user");
+    if (!saved) {
+      console.log("❌ 로그인 안 됨");
+      return;
+    }
+
+    const user = JSON.parse(saved);
+    const uid = user.uid;
+
+    db.collection("payments").doc(uid).get().then(doc => {
+      if (doc.exists && doc.data().paid === true) {
+        unlockContent();
+      } else {
+        console.log("❌ 아직 결제 안 됨");
+      }
+    }).catch(error => {
+      console.error("🔥 Firestore 에러:", error);
+    });
+  });
+</script>
+  
