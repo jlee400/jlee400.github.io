@@ -1,0 +1,81 @@
+---
+layout: page
+title: 결제하기
+permalink: /pay/
+---
+
+<h2>💳 프리미엄 콘텐츠 결제</h2>
+
+<div id="payment-area">
+  <p>👇 결제 버튼을 눌러주세요</p>
+  <div id="paypal-button-container"></div>
+</div>
+
+<div id="status" style="margin-top: 1rem;"></div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+
+<!-- PayPal SDK (client-id는 sandbox용) -->
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDXB4ilHCdpWzc93i_ZuXy28XF0WD5sRmw",
+    authDomain: "csi500.firebaseapp.com",
+    projectId: "csi500"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  let currentUser = null;
+
+  function showStatus(msg) {
+    document.getElementById("status").innerText = msg;
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("user");
+    if (!saved) {
+      showStatus("❌ 로그인 후 이용해주세요.");
+      document.getElementById("payment-area").style.display = "none";
+      return;
+    }
+
+    currentUser = JSON.parse(saved);
+    showStatus("✅ 로그인 확인: " + currentUser.email);
+
+    // PayPal 버튼 그리기
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '5.00'  // 💸 결제 금액 설정
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          showStatus("🎉 결제 완료! Firestore에 저장 중...");
+
+          const uid = currentUser.uid;
+          db.collection("payments").doc(uid).set({
+            paid: true,
+            timestamp: new Date()
+          }).then(() => {
+            showStatus("✅ 결제 상태 저장 완료! /premium/ 페이지에서 열람 가능");
+          }).catch((err) => {
+            console.error("❌ Firestore 저장 실패", err);
+            showStatus("❌ 저장 실패: " + err.message);
+          });
+        });
+      }
+    }).render('#paypal-button-container');
+  });
+</script>
