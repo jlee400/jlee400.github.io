@@ -8,10 +8,11 @@ permalink: /login/
   <button id="login-btn">🔐 Google 로그인</button>
 
   <div id="user-info" style="display:none;">
-    <p><span id="user-email"></span> 님, 환영합니다!</p>
+    <p>👤 <span id="user-email"></span> 님, 환영합니다!</p>
     <button id="logout-btn">🚪 로그아웃</button>
   </div>
 </div>
+
 
 <!-- Firebase SDKs: CDN + compat 버전 -->
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
