@@ -5,10 +5,6 @@ title: ""
 permalink: /
 ---
 
----
-layout: home
-title: "Welcome"
----
 
 <!-- 🔐 로그인 UI -->
 <div id="auth-section">
