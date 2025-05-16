@@ -1,7 +1,16 @@
 exports.handler = async (event) => {
-  const { code } = JSON.parse(event.body);
+  let body = {};
+  try {
+    body = JSON.parse(event.body || '{}');
+  } catch (err) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ success: false, message: "Invalid JSON input" })
+    };
+  }
 
-  const PASSWORD = "mypassword";  // 원하는 비밀번호 설정
+  const code = body.code;
+  const PASSWORD = "12345"; // 너가 원하는 비밀번호로 바꿔줘
 
   if (code === PASSWORD) {
     return {
