@@ -5,7 +5,12 @@ title: ""
 permalink: /
 ---
 
-<!-- 로그인 UI -->
+---
+layout: home
+title: "Welcome"
+---
+
+<!-- 🔐 로그인 UI -->
 <div id="auth-section">
   <button id="login-btn">🔐 Google 로그인</button>
 
@@ -15,7 +20,7 @@ permalink: /
   </div>
 </div>
 
-<!-- Firebase SDK -->
+<!-- 🔧 Firebase + 로그인 스크립트 -->
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
@@ -53,7 +58,7 @@ permalink: /
         showUser(user.email);
       })
       .catch((error) => {
-        alert("로그인 중 오류: " + error.message);
+        alert("❌ 로그인 오류: " + error.message);
         console.error(error);
       });
   }
@@ -65,10 +70,13 @@ permalink: /
     });
   }
 
+  // ✅ 여기 핵심: 버튼과 함수 연결!
   window.onload = () => {
-    // 버튼에 함수 직접 연결 (Jekyll에선 onclick 속성 잘 안 먹힐 수 있음)
-    document.getElementById("login-btn").addEventListener("click", signIn);
-    document.getElementById("logout-btn").addEventListener("click", signOut);
+    const loginBtn = document.getElementById("login-btn");
+    const logoutBtn = document.getElementById("logout-btn");
+
+    if (loginBtn) loginBtn.addEventListener("click", signIn);
+    if (logoutBtn) logoutBtn.addEventListener("click", signOut);
 
     const saved = localStorage.getItem("user");
     if (saved) {
@@ -77,6 +85,7 @@ permalink: /
     }
   };
 </script>
+
 
 <div style="text-align: center;">
   <h1>💡Hub solves your curiosity,<br>Juhyun's Learning Hub</h1>
