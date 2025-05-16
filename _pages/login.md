@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "sign in"
-permalink: /signin/
+title: 로그인
+permalink: /login/
 ---
 
 <div id="auth-section">
-  <button id="login-btn">🔐 Google sign in</button>
+  <button id="login-btn">🔐 Google 로그인</button>
 
   <div id="user-info" style="display:none;">
     <p>👤 <span id="user-email"></span> 님, 환영합니다!</p>
@@ -16,7 +16,6 @@ permalink: /signin/
 <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
 
 <script>
   const firebaseConfig = {
@@ -51,7 +50,7 @@ permalink: /signin/
         showUser(user.email);
       })
       .catch((error) => {
-        alert("❌ 로그인 오류: " + error.message);
+        alert("❌ 로그인 실패: " + error.message);
         console.error(error);
       });
   }
