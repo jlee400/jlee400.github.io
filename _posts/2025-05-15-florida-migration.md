@@ -70,4 +70,4 @@ After filtering for intra-Florida migration, I built a directed weighted network
 
 ![MigrationMap](/assets/migration_map.png)
 
-![IntraFlorida](/assets/IntraFlorida.png)
+
