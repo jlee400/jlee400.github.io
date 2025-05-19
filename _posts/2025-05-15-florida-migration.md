@@ -23,9 +23,9 @@ After filtering for intra-Florida migration, I built a directed weighted network
 
 # Migration weight and Network between counties in Florida
 
-![IntraFlorida](assets/IntraFlorida.png)
+![IntraFlorida](/assets/IntraFlorida.png)
 
-![NetworkFlorida](assets/NetworkFlorida.png)
+![NetworkFlorida](/assets/NetworkFlorida.png)
 
 # Community Detection
 
@@ -33,41 +33,41 @@ After filtering for intra-Florida migration, I built a directed weighted network
 ### Description
 ### Community Visualization
 
-![GirvanNewman](assets/girvan_newman.png)
+![GirvanNewman](/assets/girvan_newman.png)
 
 ### Mapping 
 
-![GirvanNewmanMap](assets/girvan_newman_map.png)
+![GirvanNewmanMap](/assets/girvan_newman_map.png)
 
 ## Louvain
 ### Description
 ### Mapping 
 
-![LouvainMap](assets/louvain_map.png)
+![LouvainMap](/assets/louvain_map.png)
 
 ## Leiden
 ### Description
 ### Mapping 
 
-![LeidenMap](assets/leiden_map.png)
+![LeidenMap](/assets/leiden_map.png)
 
 
 # Demographic variation by Community
 ## Race
 
-![RaceBox](assets/racial_composition.png)
+![RaceBox](/assets/racial_composition.png)
 
-![RaceMap](assets/race_map.png)
+![RaceMap](/assets/race_map.png)
 
 ## Education
 
-![EducationBox](assets/education_attainment.png)
+![EducationBox](/assets/education_attainment.png)
 
 
-![EducationMap](assets/education_map.png)
+![EducationMap](/assets/education_map.png)
 
 # Interactive Visualization with Migration
 
-![MigrationMap](assets/migration_map.png)
+![MigrationMap](/assets/migration_map.png)
 
-![IntraFlorida](assets/IntraFlorida.png)
+![IntraFlorida](/assets/IntraFlorida.png)
