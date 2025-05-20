@@ -294,6 +294,12 @@ Additionally, dashed black lines outline the metropolitan statistical areas (MSA
 
 This layered map allows us to understand the intersection between racial composition, migration flows, and urban structure in Florida, revealing which communities are growing, declining, or diversifying.
 
+# Full Code
+
+If you are interested in this project, you can check out my full code at this link!
+
+☕ [Code PDF link](https://buymeacoffee.com/jlee400/data-science-project-how-migration-shapes-florida-racial-educational-gaps-a-commu)
+
 # Thanks a lot for reading!
 
 If you found this project insightful, please consider leaving a like, sharing, or subscribing to stay updated on more data-driven explorations.
