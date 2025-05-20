@@ -7,6 +7,9 @@ categories: project
 comments: true
 thumbnail: https://daily.jstor.org/wp-content/uploads/2019/04/how_florida_got_its_name_1050x700.jpg
 ---
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jlee400" data-color="#5F7FFF" data-emoji="🍔"  data-font="Cookie" data-text="Buy me a burger" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+
 # Introduction
 
 Understanding spatial inequality requires more than examining socioeconomic indicators in isolation. This project explores how migration-based community structures in Florida relate to racial composition and educational attainment. 
