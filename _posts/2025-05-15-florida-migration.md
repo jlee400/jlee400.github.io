@@ -185,7 +185,7 @@ According to the NIH, National Institute on Minority Health and Health Dispariti
 |Dixie|8.1|1,037|	
 |Lafayette|7.9|464|
 
-``Source: [NIH](https://hdpulse.nimhd.nih.gov/data-portal/social/table?age=081&age_options=age25_1&demo=00006&demo_options=education_3&race=00&race_options=race_7&sex=0&sex_options=sexboth_1&socialtopic=020&socialtopic_options=social_6&statefips=12&statefips_options=area_states)``
+Source: [NIH](https://hdpulse.nimhd.nih.gov/data-portal/social/table?age=081&age_options=age25_1&demo=00006&demo_options=education_3&race=00&race_options=race_7&sex=0&sex_options=sexboth_1&socialtopic=020&socialtopic_options=social_6&statefips=12&statefips_options=area_states)
 
 Of course, even the smallest percentages ended up as 7.9%, but it does not necessarily mean the worst education level in America. 
 
