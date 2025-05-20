@@ -279,9 +279,8 @@ Residents have recently taken to the r/Miami subreddit to complain about their w
 # Interactive Map of Florida's Net Migration
 
 [![Florida Net Migration Map](/assets/thumbnail.PNG)](https://jlee400-florida-netmigration.netlify.app/)
+↑ Click the picture above to see the Interactive Florida Net Migration Map
 
-
-Please travel around this map!
 
 The map above visualizes county-level migration patterns in Florida by combining racial and migration data. The background shading indicates the proportion of African American residents, with darker tones representing higher concentrations.
 Circle markers show the magnitude and direction of net migration: larger circles indicate greater movement, while blue bubbles reflect net population gain and red bubbles indicate net loss.
