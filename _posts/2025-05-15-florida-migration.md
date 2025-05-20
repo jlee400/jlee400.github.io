@@ -272,7 +272,7 @@ According to [Miami New Times](https://www.miaminewtimes.com/news/more-people-ar
 
 > The soaring housing costs, nonstop traffic, and rising inflation rates in Miami, in particular, have left people no choice but to leave for other parts of the country.
 
-Residents have recently taken to the r/Miami subreddit to complain about their wages not keeping up with the rising housing costs. If you are interested [Click](https://www.reddit.com/r/Miami/comments/1jbvt77/what_is_your_salary_vs_your_rent/?utm_source=embedv2&utm_medium=post_embed&utm_content=post_body&embed_host_url=https://www.miaminewtimes.com/news/sky-high-miami-rental-prices-front-and-center-as-locals-sound-off-22681370)
+Residents have recently taken to the r/Miami subreddit to complain about their wages not keeping up with the rising housing costs. If you are interested: [Click](https://www.reddit.com/r/Miami/comments/1jbvt77/what_is_your_salary_vs_your_rent/?utm_source=embedv2&utm_medium=post_embed&utm_content=post_body&embed_host_url=https://www.miaminewtimes.com/news/sky-high-miami-rental-prices-front-and-center-as-locals-sound-off-22681370)
 
 
 # Interactive Map of Florida's Net Migration
