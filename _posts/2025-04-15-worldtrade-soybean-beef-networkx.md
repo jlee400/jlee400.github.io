@@ -228,10 +228,7 @@ In 2023, the most latest year in the dataset, the bar graph of in degree and out
 
 ### In and Out degree of soybean and beef within the Top 7 most frequent countries
 
-<figure>
-    <img src="/assets/Out_degree.png" alt="Alt text" />
-    <figcaption>Out degree of top 7 countries (1986 - 2023)</figcaption>
-</figure>
+![Out degree of top 7 countries (1986 - 2023)](/assets/Out_degree.png)
 
 For out degree trend, it shows countries with their power at **export**. This graph was introduced from sorting all countries yearly then picked top 7 countries that frequently high ranked in its outdegree. Top 7 countries with the most powerful out degree are US, Japan, mainland China, Canada, Paraguay, Argentina, and Brazil.
 
@@ -239,10 +236,7 @@ Again, US is the most stable in its out degree tendency. Interestingly China is 
 
 One noteable thing was most of the countries had their exprot crisis in 2019-2020, which was COVID-19 period. However, Brazil is the one who had their remarkable export degree. According to external news articles, this was because Brazil replaced China's position during China's strict quarantine period in COVID-19 period.
 
-<figure>
-    <img src="/assets/In_degree.png" alt="Alt text" />
-    <figcaption>In the degree of the top 7 countries (1986 - 2023)</figcaption>
-</figure>
+![In the degree of the top 7 countries (1986 - 2023)](/assets/In_degree.png)
 
 In degree trends shows countries are shown with their degree of **import**. This graph was introduced in the same way as out out-degree trend analysis. The top 7 countries with the most powerful import were: US, Taiwanese China, Japan, mainland China, Paraguay, Brazil, and Republic of Korea. 
 
@@ -252,26 +246,17 @@ Otherwise, Brazil has their increasing tendency towards imports in recent years,
 
 ### Simple network of soybean and beef trade
 
-<figure>
-    <img src="/assets/Network_of_soybean.png" alt="Alt text" />
-    <figcaption>Simple Network of soybean</figcaption>
-</figure>
+![Simple Network of soybean](/assets/Network_of_soybean.png)
 
-This is a breakdown of each items in world trade. First, this is a directed network graph for soybeans. Most of the countries are well related accross each country. It is possible to observe countries that only imports soybeans. However, this graph is not so clear to look at.
+This is a breakdown of each item in world trade. First, this is a directed network graph for soybeans. Most of the countries are well related across each country. It is possible to observe countries that only imports soybeans. However, this graph is not so clear to look at.
 
-<figure>
-    <img src="/assets/Network_of_beef.png" alt="Alt text" />
-    <figcaption>Simple Network of beef</figcaption>
-</figure>
+![Simple Network of beef](/assets/Network_of_beef.png)
 
 Now, this is a directed network graph of beef. It shows different postures of its network compared to the soybean network. For the Republic of Korea, it shows how many countries the Republic of Korea imports from many other countries. However, this graph is not so clear to look at. 
 
 ### Detailed network analysis of soybean
 
-<figure>
-    <img src="/assets/arf_of_soybeans.png" alt="Alt text" />
-    <figcaption>Directed network graph of soybean</figcaption>
-</figure>
+![Directed network graph of soybean](/assets/arf_of_soybeans.png)
 
 Now, this is a more sophisticated network graph with its arf_layout. The color is based on modularity and betweenness centrality. 
 
@@ -291,32 +276,25 @@ These two theory helps to uncover both community structure and key players in gl
 
 Observing this infographic, it is possible to see that US is the most biggest country in soybeans trade. However, there is a rapid increase in Brazil that overtook US. It is not reflected on the network graph as it is so rapidly increased in short period while the graph shows cumulative interactions.
 
-<figure>
-    <img src="/assets/Trade_volume_of_soybeans.png" alt="Alt text" />
-    <figcaption>Network graph reflected its weight</figcaption>
-</figure>
+![Network graph reflected its weight](/assets/Trade_volume_of_soybeans.png)
 
-The next visualization reflects the volume of soybean trade with the width of the edge. The US is the most powerful country in the soybean trade. Countries in blue color have meaningful and explicit interaction in this graph.
+The next visualization reflects the volume of soybean trade with the width of the edge. The US is the most powerful country in the soybean trade. Countries in blue have meaningful and explicit interaction in this graph.
 
 
 ### Detailed network analysis of beef
 
-<figure>
-    <img src="/assets/arf_of_Beef.png" alt="Alt text" />
-    <figcaption>Directed network graph of beef</figcaption>
-</figure>
+![Directed network graph of beef](/assets/arf_of_Beef.png)
 
 This is a network analysis of beef and reflecting the edge width of its trade volume. In this graph, it is possible to see that European countries, France, Germany, Italy, Netherlands, United Kingdom have having dense relationship with each other in the beef trade. Globally, the US, United Arab Emirates, Canada, the  Philippines, Australia, Jordan, and New Zealand have bigger size of node size. It is very interesting to see that geographically close countries like {US, Canada}, {Australia, New Zealand, the Philippines}, and {United Arab Emirates, Jordan are interacting with each other in trade of beef.
 
 ![World Beef Trade](https://cdn.statcdn.com/Infographic/images/normal/19122.jpeg)
 
-Along with this infographic, EU is the country exporting and importing beef each other. Also, countries like Brazil, India US, Australia, Canada are big hands in world beef trade. This is the statistic infographic only regarding 2023, so it may be different from what the network graph shows.
+Along with this infographic, the EU is a country exporting and importing beef from other countries. Also, countries like Brazil, India US, Australia, Canada are big players in the world beef trade. This is the statistic infographic only regarding 2023, so it may be different from what the network graph shows.
 
 ### Network of world soybean and beef trade
-<figure>
-    <img src="/assets/TradeVolume of soybeans and beef.png" alt="Alt text" />
-    <figcaption>Network graph of trade volume of both soybeans and beef</figcaption>
-</figure>
+
+
+![Network graph of trade volume of both soybeans and beef](/assets/TradeVolume_of_soybeans_and_beef.png)
 
 The network of integrated world soybean and beef trade shows how the world trade in those items is forming its communities. 
 
