@@ -279,7 +279,7 @@ Residents have recently taken to the r/Miami subreddit to complain about their w
 # Interactive Map of Florida's Net Migration
 
 [![Florida Net Migration Map](/assets/thumbnail.PNG)](https://jlee400-florida-netmigration.netlify.app/)
-↑ Click the picture above to see the Interactive Florida Net Migration Map
+**↑ Click the picture above to see the Interactive Florida Net Migration Map**
 
 
 The map above visualizes county-level migration patterns in Florida by combining racial and migration data. The background shading indicates the proportion of African American residents, with darker tones representing higher concentrations.
