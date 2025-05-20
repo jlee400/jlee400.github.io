@@ -93,7 +93,7 @@ The Louvain method is a modularity-based community detection algorithm that is e
 
 ![LouvainMap](/assets/louvain_map.png)
 
-Louvain clustered areas are attached to the same community. Northen Florida is clustered into community 1, while southern part is clustered to community 2. 
+Louvain clustered areas are attached to the same community. Northern Florida is clustered into community 1, while the southern part is clustered to community 2. 
 
 ## Leiden
 ### Description
@@ -191,13 +191,13 @@ Of course, even the smallest percentages ended up as 7.9%, but it does not neces
 
 According to [US News](https://www.usnews.com/news/best-states/rankings/education/higher-education/educational-attainment), Florida is ranked in its education like the following:
 
-#24 in Educational Attainment
+**#24 in Educational Attainment**
 
-#6 in Best States Overall
+**#6 in Best States Overall**
 
-#2 in Education
+**#2 in Education**
 
-#1 in Higher Education
+**#1 in Higher Education**
 
 However, as the US contains varied deviations by state and county, the map of education attainment shows the difference of that. 
 
@@ -205,7 +205,7 @@ However, as the US contains varied deviations by state and county, the map of ed
 
 The counties that contained the highest proportion of less than high school were DeSoto, Glades, and Hendry. These counties seemingly need more educational or financial support so that citizen in these areas may achieve at least their high school diploma. 
 
-As supported by official NIH statistics, counties such as Leon, Seminole, Orange, Alachua, St.Johns, Palm Beach, Collier, and Monroe contained high educational attainment, more thana  college degree, and further, Bachelor's Degree. 
+As supported by official NIH statistics, counties such as Leon, Seminole, Orange, Alachua, St.Johns, Palm Beach, Collier, and Monroe contained high educational attainment, more than a college degree, and further, a Bachelor's Degree. 
 
 It is also very interesting that the Asians are clustered in the community containing these counties with higher educational attainment. 
 
