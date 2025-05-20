@@ -5,6 +5,7 @@ author: "Juhyun Lee"
 toc: true
 categories: project
 comments: true
+thumbnail: https://daily.jstor.org/wp-content/uploads/2019/04/how_florida_got_its_name_1050x700.jpg
 ---
 # Introduction
 
@@ -277,7 +278,8 @@ Residents have recently taken to the r/Miami subreddit to complain about their w
 
 # Interactive Map of Florida's Net Migration
 
-[![Interactive Florida's Net Migration](https://api.netlify.com/api/v1/badges/c011b8ab-c39c-4048-b423-c65a3c45c1f9/deploy-status)](https://app.netlify.com/projects/jlee400-florida-netmigration/deploys)
+[![Florida Net Migration Map](/assets/thumbnail.PNG)](https://jlee400-florida-netmigration.netlify.app/)
+
 
 Please travel around this map!
 
