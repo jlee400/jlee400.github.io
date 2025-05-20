@@ -10,12 +10,12 @@ image: /assets/TradeVolume of soybeans and beef.png
 ---
 ## Project Description
 
-This project was launched from individual research in George Mason University course CSI 500, Computational Science Tools. Reading an academic journal, _Social network analysis of virtual water trade among major countries in the world_, led to this project to observe ways to academically analyze world trade data using the `networkx` package in Python.
+This project was launched from individual research in the George Mason University course CSI 500, Computational Science Tools. Reading an academic journal, _Social network analysis of virtual water trade among major countries in the world_, led to this project to observe ways to academically analyze world trade data using the `networkx` package in Python.
 
 ## Journal Article Summary
 ### [Deng et al. (2021)] Social network analysis of virtual water trade among major countries in the world
 
-This study observes the virtual water trade strategy among 19 major countries from 2006 to 2015. The virtual water strategy refers to how water-scarce countries and regions replace their own production. Using a _multi-regional input-output model_ and _social network analysis using data sources from [Eora Global MRIO](http://www.worldmrio.com)_, it thoroughly explains how water trade operates throughout the world.
+This study observes the virtual water trade strategy among 19 major countries from 2006 to 2015. The virtual water strategy refers to how water-scarce countries and regions replace their water. Using a _multi-regional input-output model_ and _social network analysis using data sources from [Eora Global MRIO](http://www.worldmrio.com)_, it thoroughly explains how water trade operates throughout the world.
 
 ### Research question and research gap 
 
@@ -27,9 +27,9 @@ This study aims to understand how global virtual water trade is structured using
 
 This method can be divided into a single-region input-output model and a multi-regional input-output model according to the number of research areas. 
 
-Both models follow basically the same steps. The input-output model uses the water use data of each industry divided by the total output to obtain the <span style="background-color:#FFE6E6">coefficient of direct water use</span>.
+Both models follow the same steps. The input-output model uses the water use data of each industry divided by the total output to obtain the <span style="background-color:#FFE6E6">coefficient of direct water use</span>.
 
-The coefficient of direct water use is multiplied with the <span style="background-color:#E6E6FA">_Leontief inverse matrix_</span>. Finally, import and export data in the input-output table are used to obtain virtual water trade volume in various industries.
+The coefficient of direct water use is multiplied by the <span style="background-color:#E6E6FA">_Leontief inverse matrix_</span>. Finally, the import and export data in the input-output table are used to obtain the virtual water trade volume in various industries.
 
 2. Multi-regional input-output model
 
@@ -96,7 +96,7 @@ $$
 OD = \sum_{s \ne r,\, s=1}^{m} t^{rs}
 $$
 
-The greater the Out-Degree (OD), the more virtual water exports a country has.
+The greater the Out-Degree (OD), the more virtual water a country has.
   
 - In-Degree
 
@@ -110,7 +110,7 @@ The greater the In-Degree (ID), the more virtual water imports a country has. Al
 
 The virtual water imports and exports of major countries (regions) have increased to varying degrees, especially in 2015 due to the improvement of transportation facilities. Moreover, logistics costs are continually decreasing, expanding the trade volume of each country. 
 
-After thorough network analysis using the methods described above, the data matrix corresponding to the virtual water trade network reflected the multilateral virtual water trade between multiple countries. Over the years, the gap between virtual water imports and exports is growing. China had the largest virtual water exports among the 19 major countries, while Saudi Arabia had the smallest. 
+After a thorough network analysis using the methods described above, the data matrix corresponding to the virtual water trade network reflected the multilateral virtual water trade between multiple countries. Over the years, the gap between virtual water imports and exports has grown. China had the largest virtual water exports among the 19 major countries, while Saudi Arabia had the smallest. 
 
 On the other hand, the US had the largest virtual water imports. In 2006, Argentina had the smallest virtual water imports, and in 2015, it was Saudi Arabia. This shows how the virtual water trade trends vary by year.
 
@@ -118,19 +118,19 @@ In both 2006 and 2015, the country with the most outflow was China, and the one 
 
 ![스크린샷 2025-04-15 173653](https://github.com/user-attachments/assets/4b19d546-7b5f-4fc1-a697-d889cd00c86e)
 
-In this virtual trade networks between 19 major countries, the size of node in the network reflects the size of the degree and the degree of ingress respectively. The thickness of the trade links between countries reflects the amount of virtual water import and export trade between countries.
+In this virtual trade networks between 19 major countries, the size of node in the network reflects the size of the degree and the degree of ingress respectively. The thickness of the trade links between countries reflects the amount of virtual water imported and exported between countries.
 
 The greater the bilateral trade volume between countries, the thicker the connection. 
 
 ### Conclusions and implications
 
-The virtual water import and export of major countries in the world increased in 2015 varying degrees. Among them, China's virtual water import and Russia's virtual water export growth rates were the highest. Major countries have the largest export and import in the primary industry, except for Japan and South Korea. 
+The virtual water import and export of major countries in the world increased in 2015 to varying degrees. Among them, China's virtual water import and Russia's virtual water export growth rates were the highest. Major countries have the largest exports and imports in the primary industry, except for Japan and South Korea. 
 
 For the implications, there were two possibilities:
 
-First, water-deficient countries can alleviate the pressure on water suply by importing sources.
+First, water-deficient countries can alleviate the pressure on the water supply by importing water.
 
-Second, the trade volume of agricultural products in various countries may be lower than the volume of trade in industrial products and services, the amount of water consumed per unit of production of agricultural products is much greater than that of industrial products and services. 
+Second, the trade volume of agricultural products in various countries may be lower than the volume of trade in industrial products and services. The amount of water consumed per unit of production of agricultural products is much greater than that of industrial products and services. 
 
 In thse reasons, while emphasizing the virtual water trade of agricultural products, it is necessary to pay attention to the production and production of related industries and trading.
 
@@ -156,7 +156,7 @@ Grinding the soybeans into meal makes it easier on the cattle’s digestive syst
 > FAOSTAT provides free access to food and agriculture data for over 245 countries and territories and covers all FAO regional groupings
 from 1961 to the most recent year available. _FAO STAT Official Website_
 
-The data used for this project was downloaded from _[FAOSTAT]((https://www.fao.org/faostat/en/#data))_.
+The data used for this project was downloaded from _[FAOSTAT](https://www.fao.org/faostat/en/#data).
 This project used _Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv_ data for edge, and _Macro-Statistics_Key_Indicators_E_All_Data_(Normalized).csv_ and _Population_E_All_Data_(Normalized).csv_ for node.
 
 
@@ -179,10 +179,10 @@ This project used _Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv_ data f
 2. The node data  
 
    2-1. Population data  
-   Contained same columns.
+   Contained the same columns.
 
    2-2. Macro data  
-   Contained same columns.
+   Contained the same columns.
 ### data pre-processing
 
 (1) Extraction of columns in need
@@ -215,23 +215,18 @@ node = pd.merge(macro, pop, on=["country", "country_code", "year"], how= "inner"
 ## Analysis
 ### Density of soybean and beef in world trade
 
-<figure>
-    <img src="/assets/density.png" alt="Alt text" />
-    <figcaption>Density of soybean and beef</figcaption>
-</figure>
+![Density of soybean](/assets/density.png)
+   
 
-Higher density of network refers to a greater average value of the virtual water trade among countries and a closer relationship. In the graph, it shows critically lower tendency in its early 2000s. Infering this from the journal article, financial crisis in 2008 led to the decline of world trade. Then, it increases as recovering severe previous drop for both soybeans and beef. 
+Higher density of network refers to a greater average value of the virtual water trade among countries and a closer relationship. In the graph, it shows a critically lower tendency in its early 2000s. Infering this from the journal article, the financial crisis in 2008 led to the decline of world trade. Then, it increases as recovering severe previous drop for both soybeans and beef. 
 
-### In and Out degree of soybean and beef within Top 7 most frequent countries (2023) 
+### In and Out degree of soybean and beef within the Top 7 most frequent countries (2023) 
 
-<figure>
-    <img src="/assets/top7_in_out_deg.png" alt="Alt text" />
-    <figcaption>In and Out degree of top 7 countries (2023)</figcaption>
-</figure>
+![In and Out degree of top 7 countries (2023)](/assets/top7_in_out_deg.png)
 
 In 2023, the most latest year in the dataset, the bar graph of in degree and out detree shows the most powerful and active countries in world trade lately. Needless to say, United states of americal was the most active country among top 7 countries displayed on the bar graph. Second place is mainland China, and both US and China is overwhelming absolute power in the world trade. Rest of them are Argentina, Paraguay, Brazil, Canada, and Spain. 
 
-### In and Out degree of soybean and beef within Top 7 most frequent countries
+### In and Out degree of soybean and beef within the Top 7 most frequent countries
 
 <figure>
     <img src="/assets/Out_degree.png" alt="Alt text" />
@@ -246,14 +241,14 @@ One noteable thing was most of the countries had their exprot crisis in 2019-202
 
 <figure>
     <img src="/assets/In_degree.png" alt="Alt text" />
-    <figcaption>In degree of top 7 countries (1986 - 2023)</figcaption>
+    <figcaption>In the degree of the top 7 countries (1986 - 2023)</figcaption>
 </figure>
 
-In degree trends shows countries with their degree of **import**. This graph was introduced with the same way as out degree trend analysis. Top 7 countries the most powerful in import were: US, Taiwanese China, Japan, mainland China, Paraguay, Brazil, and Republic of Korea. 
+In degree trends shows countries are shown with their degree of **import**. This graph was introduced in the same way as out out-degree trend analysis. The top 7 countries with the most powerful import were: US, Taiwanese China, Japan, mainland China, Paraguay, Brazil, and Republic of Korea. 
 
-Regarding import degree, most of the countries shows increasing tendency with some noticeable trends. Most of the country, of course, experienced significant drop in their import activity during COVID-19. However, mainland China recovered its import degree increased substantially in 2019. According to external new articles, mainland China increased their import rate to recover demand on their supplies due to the shut-down of factories during pandemic.
+Regarding import degree, most of the countries show an increasing tendency with some noticeable trends. Most of the country, of course, experienced a significant drop in their import activity during COVID-19. However, mainland China recovered its import degree increased substantially in 2019. According to external news articles, mainland China increased its import rate to recover demand for its supplies due to the shutdown of factories during the pandemic.
 
-Otherwise, Brazil has their increasing tendency on import degree in recent years, but not so stable.
+Otherwise, Brazil has their increasing tendency towards imports in recent years, but not so stable.
 
 ### Simple network of soybean and beef trade
 
@@ -269,7 +264,7 @@ This is a breakdown of each items in world trade. First, this is a directed netw
     <figcaption>Simple Network of beef</figcaption>
 </figure>
 
-Now, this is a directed network graph of beef. It shows different posture of its network comparing to soybean network. For Republic of Korea, it shows how many countries that republic of Korea imports from many other countries. However, this graph is not so clear to look at as well. 
+Now, this is a directed network graph of beef. It shows different postures of its network compared to the soybean network. For the Republic of Korea, it shows how many countries the Republic of Korea imports from many other countries. However, this graph is not so clear to look at. 
 
 ### Detailed network analysis of soybean
 
@@ -278,30 +273,30 @@ Now, this is a directed network graph of beef. It shows different posture of its
     <figcaption>Directed network graph of soybean</figcaption>
 </figure>
 
-Now, this is more sophisticated network graph with its arf_layout. The color is based on modularity and betweenness centrality. 
+Now, this is a more sophisticated network graph with its arf_layout. The color is based on modularity and betweenness centrality. 
 
 What is modularity and betweenness centrality in network theory?
 - **Modularity**
 
-Way to measure how well a network is divided into communities.
+A way to measure how well a network is divided into communities.
 
 - **Betweenness**
 
-Way to measure how well nodes connect social circles. 
+A way to measure how well nodes connect social circles. 
 
-This two theory helps to uncover both community structure and key players in gloabal trade networks. Explicitly, US is the most biggest country to trade soybeans. Also, it is possible to see that US is the main player of the world soybean trade domain for all time (1986-2023). Other countries player crucial role in world soybean trade are France, Canada, Taiwanese China, Austria, Germany and Kingdom of the Netherlands.
+These two theory helps to uncover both community structure and key players in gloabal trade networks. Explicitly, US is the most biggest country to trade soybeans. Also, it is possible to see that US is the main player of the world soybean trade domain for all time (1986-2023). Other countries player crucial role in world soybean trade are France, Canada, Taiwanese China, Austria, Germany and Kingdom of the Netherlands.
 
 
 ![World Soybean Trade](https://cdn.statcdn.com/Infographic/images/normal/19148.jpeg)
 
-Observing this infographic, it is possible to see that US is the most biggest country in soybeans trade. However, there is a rapid increase in Brazil that over took US. It is not reflected on the network graph as it is so rapidly increased in short period while the graph shows cumulative interactions.
+Observing this infographic, it is possible to see that US is the most biggest country in soybeans trade. However, there is a rapid increase in Brazil that overtook US. It is not reflected on the network graph as it is so rapidly increased in short period while the graph shows cumulative interactions.
 
 <figure>
     <img src="/assets/Trade_volume_of_soybeans.png" alt="Alt text" />
     <figcaption>Network graph reflected its weight</figcaption>
 </figure>
 
-Next visualization reflects the volume of soybean trade with width of the edge. US is obviously the most powerful country in soybean trade. Countries in blue color are having meaningful and explicit interaction in this graph.
+The next visualization reflects the volume of soybean trade with the width of the edge. The US is the most powerful country in the soybean trade. Countries in blue color have meaningful and explicit interaction in this graph.
 
 
 ### Detailed network analysis of beef
@@ -311,7 +306,7 @@ Next visualization reflects the volume of soybean trade with width of the edge. 
     <figcaption>Directed network graph of beef</figcaption>
 </figure>
 
-This is network analysis of beef and reflecting the edge width of its trade volume. In this graph, it is possible to see that european countries, France, German, Italy, Netherland, United Kingdom are having densed relationship each other with the beef trade. Globally, US, United Arab Emirates, Canada, Philippines, Australia, Jordan, and New Zealand have bigger size of node. It is very interesting to see that geographically close countries like {US, Canada}, {Austrailia, New Zealand, Philippines}, and {United Arab Emirates, Jordan} are interacting each other in trade of beef.
+This is a network analysis of beef and reflecting the edge width of its trade volume. In this graph, it is possible to see that European countries, France, Germany, Italy, Netherlands, United Kingdom have having dense relationship with each other in the beef trade. Globally, the US, United Arab Emirates, Canada, the  Philippines, Australia, Jordan, and New Zealand have bigger size of node size. It is very interesting to see that geographically close countries like {US, Canada}, {Australia, New Zealand, the Philippines}, and {United Arab Emirates, Jordan are interacting with each other in trade of beef.
 
 ![World Beef Trade](https://cdn.statcdn.com/Infographic/images/normal/19122.jpeg)
 
@@ -323,44 +318,44 @@ Along with this infographic, EU is the country exporting and importing beef each
     <figcaption>Network graph of trade volume of both soybeans and beef</figcaption>
 </figure>
 
-The network of integrated world soybean and beef trade shows how the world trade on those items are forming their own communities. 
+The network of integrated world soybean and beef trade shows how the world trade in those items is forming its communities. 
 
 - Green colored node countries
 
-France, United Kindom of Great Britain and Northern Ireland, Serbia, Netherlands, Romania, Belgium, Portugal, Greece, Austria, Sweden, Spain, Italy, Szechia, etc.
+France, United Kingdom of Great Britain and Northern Ireland, Serbia, Netherlands, Romania, Belgium, Portugal, Greece, Austria, Sweden, Spain, Italy, Szechia, etc.
 
-Those are European countires, and this shows how they are connected through world trade, not only in continent.
+Those are European countries, and this shows how they are connected through world trade, not only on the continent.
 
 - Blue colored node countries
 
 US, mainland China, Brazil, Canada, Taiwanese China, Thailand, Philippines, Argentina, Japan, India, Argentina, Hong Kong, Guatemala, etc.
 
-Those are Asian, American countries, and this shows how Asia and American countries are mainstream and broad community in world trade.
+Those are Asian, American countries, and this shows how Asia and American countries are mainstream and a broad community in world trade.
 
 - Brown colored countries
 
 United Arab Emirates, Kazakhstan, Turkiye, Jordan
 
-Those are middle east countries, and this shows how those locally close countries interact by world trade on soybeans and beef.
+Those are Middle East countries, and this shows how those locally close countries interact through world trade in soybeans and beef.
 
 - Grey colored countries
 
 South Africa, Botswana, Zambia, etc.
 
-Those are mostly african countries, and this shows how they are connected within one continent, Africa. However, that community is not so mainstream, more close to outsiders.
+Those are mostly African countries, and this shows how they are connected within one continent, Africa. However, that community is not so mainstream, closer to outsiders.
 
 ### Interactive soybean and beef world trade flow visualization
 
 <iframe src="/assets/soybean_trade_map.html" width="100%" height="600px"></iframe>
 
-This is Global soybean trade interactive network graph. You can hover for country names, zoom in and out to observe. 
+This is a Global soybean trade interactive network graph. You can hover over country names, zoom in, and out to observe. 
 
 <iframe src="/assets/beef_trade_map.html" width="100%" height="600px"></iframe>
 
 
-This is Global beef trade interactive network graph. You can hover for country names, zoom in and out to observe. 
+This is Global beef trade interactive network graph. You can hover over country names, zoom in and out to observe. 
 
-Look through how world soybeans and beef trade are different in volume by region, or continent. 
+Look at how the world soybean and beef trade are different in volume by region or continent. 
 
 ## Explanation of analysis
 
@@ -376,15 +371,15 @@ Trade networks were constructed from FAO bilateral trade data, and visualized us
 
 ## Showing codes + result
 
-If you want to check the whole code pdf file of this project, visit: [Soybean_beef_networkx_project](https://github.com/jlee400/CSI500_projects/blob/main/Post1.pdf)
+If you want to check the whole code PDF file of this project, visit: [Soybean_beef_networkx_project](https://github.com/jlee400/CSI500_projects/blob/main/Post1.pdf)
 
 ## Interpretation
 
 From the out-degree and in-degree trends, we observe that:
 
-- **United States** and **main land China** have consistently traded very actively among several years.
-- In recent years, **Brazil** is rising country in world trade in both import and export.
-- **Euroean Countries**, **Asian, American Countries**, **Middle East Countries**, **African Countries** are clustered in their trade along with geographic and political distance.
+- **United States** and **mainland China** have consistently traded very actively for several years.
+- In recent years, **Brazil** has become rising country in world trade in both import and export.
+- **European Countries**, **Asian, American Countries**, **Middle East Countries**, **African Countries** are clustered in their trade along with geographic and political distance.
 - For **soybeans**, **US**, **main land China**, **France**, **Taiwanese China** and **Canada** are notable 5 countries in their soybean trade.
 - For **beef**, **US**, **UAE**, **Philippines** **Australia**, and **New Zealand** are notable 5 countries in their beef trade.
 
@@ -392,14 +387,14 @@ These results align with global economic trends and indicate how geopolitical or
 
 ## Best regards,
 
-Thanks for making it all the way to the end!  
+Thanks for making it to the end!  
 If you're fascinated by how **Python and NetworkX** can uncover the **hidden structure of global trade**, you're one of us. 
 
 **Got questions?** Curious about another product’s trade network?  
 Drop a comment below and I might cover it next time (yes, even soybeans and beef 🫛 🐂).
 
 And hey — if you enjoyed the analysis, **click the heart🩷**!  
-It really motivates me to dive deeper into the data ocean.
+It motivates me to dive deeper into the data ocean.
 
 Until next time, data nerds! 📊🐍
 
