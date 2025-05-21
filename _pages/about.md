@@ -5,7 +5,7 @@ permalink: /about/
 author_profile: true
 ---
 
-Hi! I’m Juhyun Lee (이주현), a junior majoring in **Computational & Data Sciences** at George Mason University Korea.
+Hi! I’m Juhyun Lee (이주현), a junior majoring in **Computational & Data Sciences** at South Korea.
 
 ---
 
@@ -24,4 +24,4 @@ Hi! I’m Juhyun Lee (이주현), a junior majoring in **Computational & Data Sc
 ---
 
 ### 🎯 My Goals
-To become a professional data scientist converting data into story!
+To become a professional data scientist, convert data into a story!
