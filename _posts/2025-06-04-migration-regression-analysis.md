@@ -83,7 +83,7 @@ MR-QAP is a network regression model that accounts for the autocorrelated struct
 
 # Visualization
 
-![Permutation Distribution]("/assets/Permutation_Distribution.png")
+![Permutation Distribution](/assets/Permutation_Distribution.png)
 
 The observed R² of 0.0183 lies in the upper tail of the permutation distribution, confirming the model's modest but non-random explanatory power.
 
