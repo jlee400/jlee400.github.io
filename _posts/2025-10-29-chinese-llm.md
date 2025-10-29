@@ -9,3 +9,4 @@ description: "text mining from bilibili and LDA topic modeling Analysis about èº
 image: "https://github.com/user-attachments/assets/e3406f03-8db4-4fda-bd2d-351d76686472"
 ---
 # LDA Topic modeling Interactive Visualization
+<iframe src="/assets/lda_tangping.html" width="100%" height="600px" frameborder="0"></iframe>
